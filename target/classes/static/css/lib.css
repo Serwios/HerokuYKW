@@ -1,0 +1,368 @@
+/*FONTS-CORE*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+:root{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    position: relative;
+}
+
+/*NAVBAR*/
+nav{
+    background: #00909a;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: -80px;
+}
+
+label.logo{
+    color: #f6f6f6;
+    font-size: 33px;
+    line-height: 80px;
+    padding-left: 140px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul{
+    float: right;
+    margin-right: 60px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 2px;
+}
+
+nav ul li a{
+    color: #f6f6f6;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.active:hover{
+    background: black;
+    transition: .5s;
+}
+
+.picked{
+    background: black;
+}
+
+.picked_name {
+    color: white;
+    border-color: black;
+    border: 2px;
+    border-radius: 1px;
+}
+
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/*ADAPTIVE FORM*/
+@media (max-width: 952px){
+    label.logo{
+        font-size: 15px;
+        padding-left: 25px;
+        line-height: 80px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+        z-index: 1;
+    }
+
+}
+
+/*ADAPTIVE FORM*/
+@media (max-width: 952px){
+    label.logo{
+        font-size: 15px;
+        padding-left: 25px;
+        line-height: 80px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 362px){
+    nav ul li a{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 415px){
+    nav ul li a{
+        font-size: 16px;
+        line-height: 40px;
+    }
+}
+
+/*ADAPTIVE FORM*/
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+        margin-right: 40px;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #646473;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 10px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #3b3a3d;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .blocktext_content{
+        margin-top: 45%;
+        margin-left: 10%;
+        padding: 5px;
+        float: left;
+        width: 500px;
+        font-family: 'Hind Madurai', sans-serif;
+        display: flex;
+    }
+}
+
+@media (max-width: 569px){
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 2px;
+    }
+}
+
+@media (max-width: 655px){
+    nav ul li{
+        display: block;
+        margin: 43px 0;
+        line-height: 0;
+    }
+}
+
+section{
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: cover;
+    height: 40vw;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 80px;
+}
+
+p.blocktext{
+    color: black;
+    background-color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    transform: translate(-50%, -50%);
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+/*MEDIA-CARDS*/
+.card_container{
+    position:relative;
+    background-color:  #fff;
+    margin-right:auto;
+    margin-left:auto;
+    padding: 20px;
+    max-width:1200px;
+    display: block;
+    padding-top: -20px;
+}
+
+.card_container_2{
+    position:relative;
+    background-color:  #fff;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 2vw;
+    padding: 20px;
+    max-width:1200px;
+    display: block;
+}
+
+.card_container_3{
+    position:relative;
+    background-color:  #fff;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 2vw;
+    padding: 20px;
+    max-width:1200px;
+    display: block;
+}
+
+.card_container_4{
+    position:relative;
+    background-color:  #fff;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 2vw;
+    padding: 20px;
+    max-width:1200px;
+    display: block;
+}
+
+.card_container_row {
+    display: flex;
+    flex-flow: column;
+
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    max-width: 600px;
+    min-width: 200px;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 4);
+}
+
+/*ADAPTIVE FORM*/
+@media (min-width: 600px) {
+    .card_container_row {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .card  {
+        max-width: 400px;
+        margin-right: 20px;
+    }
+
+    .card img {
+        background: transparent;
+        width: 100%;
+    }
+}
+
+.card img {
+    background: transparent;
+    width: 100%;
+}
+
+.card_content{
+    margin:0;
+    padding: 0 10px 0;
+    flex: 1 1 auto;
+}
+
+.card_content h2 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card_content p {
+    margin:0;
+    padding-top: 10px;
+    line-height: 1.6em;
+    font-family: 'IBM Plex Serif', serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card_footer {
+    padding: 0 10px 0;
+    text-align: right;
+    font-family: 'Muli', sans serif;
+}
+
+.card_footer a {
+    text-decoration: none;
+    color: deepskyblue;
+    font-size: 20px;
+}
+
+.card_footer a:hover {
+    border-bottom: 2px solid deepskyblue;
+}
+
+.back{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button_up{
+    width: 200px;
+    height: 30px;
+    border-color: black;
+    background-color: white;
+    letter-spacing: normal;
+    color: black;
+    transition: all 300ms ease;
+    margin-bottom: 35px;
+    border-radius: 2px;
+
+}
+
+.button_up:hover{
+    background-color: black;
+    color: white;
+    transition: all 300ms ease;
+}

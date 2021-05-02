@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>YKW</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/prj.css}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">YKWorkshop</label>
+    <ul>
+        <li><a class="active" href="ykw">Інфо</a></li>
+        <li><a class="picked" href="prj">Проекти</a></li>
+        <li><a class="active" href="lib">Бібліотека</a></li>
+        <li><a class="active" href="/logout">Вийти</a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <section class="back_image"><p class="blocktext">Проектувати?</p></section>
+</div>
+<div class="container">
+    <div class="col">
+        <div class="card-container">
+            <div class="card">
+                <div class="project_image_1"></div>
+                <h2>YKWorkshop</h2>
+                <h4>&ensp;Власне перший проект з тих що я хочу внести сюди - мій сайт. Я писав його доволі довго, адже хотів зробити цілісну систему,
+                    яку в подальшому зможу доповнюваи. Я розумію, що це звучить не дуже серйозно, але я витратив час, щоб освоїти навчики Spring та покращити
+                    Java EE.
+                    &ensp;
+                </h4>
+                <h3>
+                    Код: <a href="https://github.com/Serwios/YKWorkshopHeroku" class="code_href"> GitHub</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col">
+    <div class="card-container">
+        <div class="card">
+            <div class="project_image_2"></div>
+            <h2>Facer / Herodot</h2>
+            <h4>
+                &ensp;Балабол ще той. Якого чорта? Ти ненависті не бачив? Пороху не чув? Якщо інформація виливається, то ніколи не вертається
+                Ти вважаєш, що маєш якесь право? Мовчати. А я тут фігню сам написати можу.
+                &ensp;
+            </h4>
+            <h3>
+                Код: <a href="https://github.com/Serwios/Facer" class="code_href"> GitHub</a>
+            </h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>

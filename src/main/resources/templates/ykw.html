@@ -1,0 +1,46 @@
+<html lang="uk" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>YKW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/ykw.css}"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">YKWorkshop</label>
+    <ul>
+        <li><a class="picked" href="#">Інфо</a></li>
+        <li><a class="active" href="prj">Проекти</a></li>
+        <li><a class="active" href="lib">Бібліотека</a></li>
+        <li><a class="picked_name" th:text="${name}"></a></li>
+        <li><a class="active" href="/logout">Вийти</a></li>
+    </ul>
+</nav>
+<section class="back"><p class="blocktext">Вітаю у майстерні</p></section>
+<div class="content">
+    <div class="blocktext_content">
+        &ensp; Це той самий храм до якого не дібрався ні Герострат ні комуністи.
+        Якщо говорити скромно,то цей "сайт" лише бібліотека з моїми творами, списками, історіями. Тут ще є цифрова бібліотека,
+        добірки статтей, списки. Ну і на кінець - проекти по програмуванню і зв'язок із мною. Міні-блог.
+    </div>
+    <div class="buttontext">
+        <button class="custom-btn btn-16"><a href="https://github.com/Serwios" class="connection">GitHUB</a></button>
+        <button onclick="isEmail()" class="custom-btn btn-16"><a href="https://t.me/Edgar_Allan_Po" class="connection">Email/TG</a></button>
+        <button class="custom-btn btn-16"><a href="https://www.instagram.com/electro__sheep/" class="connection">Instagram</a></button>
+        <button class="custom-btn btn-16"><a href="https://www.linkedin.com/in/yaroslav-kutsela-a243901a3/" class="connection">LinkedIN</a></button>
+    </div>
+</div>
+</body>
+<script>
+    console.log("Тіні, їхня поступова зміна, заокруглені кутики і transparent бек роблять неймовірне");
+    function isEmail() {
+        alert("serwserw293@gmail.com");
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>YKW</title>
+	<link rel="stylesheet" th:href="@{/css/registration.css}"/>
+</head>
+<body>
+<form action="/registration" method="post" class="auto_form">
+	<div class="container">
+		<label><b>Username</b></label>
+		<label>
+			<input type="text" placeholder="Enter Username" name="name" required>
+		</label>
+		<label><b>Password</b></label>
+		<label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+			<input type="password" placeholder="Confirm Password" name="passwordConfirm" required>
+		</label>
+		<label>
+			<b>Email</b>
+			<input type="email" placeholder="Enter your email" name="username" required>
+		</label>
+		<b th:text="${text}"></b>
+		<button type="submit" class="button_register">Register</button>
+		<a href="/login"><button type="button" class="button_register">Back</button></a>
+	</div>
+</form>
+</body>
+</html>

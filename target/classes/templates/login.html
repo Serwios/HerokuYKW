@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YKW</title>
+    <link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+</head>
+<body>
+<form action="/login" class="auto_form" method="post">
+    <div class="container">
+        <label><b>Username</b></label>
+        <label>
+            <input type="text" id="email" placeholder="Enter Username" name="username" required>
+        </label>
+        <label><b>Password</b></label>
+        <label>
+            <input type="password" id="password" placeholder="Enter Password" name="password" required>
+        </label>
+        <label>
+            <select class="selector">
+                <option>Male</option>
+                <option>Female</option>
+                <option>None</option>
+                <option>IDK</option>
+                <option>Agender</option>
+                <option>Androgyne</option>
+                <option>Androgynous</option>
+                <option>Bigender</option>
+                <option>Cis</option>
+                <option>Cisgender</option>
+                <option>Cis Female</option>
+                <option>Cis Male</option>
+                <option>Cis Man</option>
+                <option>Cis Woman</option>
+                <option>Cisgender Female</option>
+                <option>Female to Male</option>
+                <option>FTM</option>
+                <option>Gender Fluid</option>
+                <option>Gender Nonconforming</option>
+                <option>Gender Questioning</option>
+                <option>Gender Variant</option>
+                <option>Genderqueer</option>
+                <option>Intersex</option>
+                <option>Male to Female</option>
+                <option>MTF</option>
+                <option>Other</option>
+                <option>Neither</option>
+                <option>Transsexual Person</option>
+                <option>Transsexual Man</option>
+                <option>Transsexual Person</option>
+                <option>Anarcho-Communist</option>
+                <option>I don`t know</option>
+            </select>
+        </label>
+        <button type="submit" class="button_login">Login</button>
+        <a href="/registration"><button type="button" class="button_register">Registration</button></a>
+    </div>
+</form>
+<script>
+    console.log("  _                                             \n" +
+            " | \\  _  ._  |  _      _   _|   |_       \\_/ |/ \n" +
+            " |_/ (/_ |_) | (_) \\/ (/_ (_|   |_) \\/    |  |\\ \n" +
+            "         |         /                /           ");
+</script>
+</body>
+</html>

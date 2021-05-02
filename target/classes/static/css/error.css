@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url("../fonts/montserratalternates-bold-webfont.woff2") format("woff2"),
+    url("../fonts/montserratalternates-bold-webfont.woff") format("woff"),
+    url("../fonts/MontserratAlternates-Bold.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url("../fonts/montserratalternates-medium-webfont.woff2") format("woff2"),
+    url("../fonts/montserratalternates-medium-webfont.woff") format("woff"),
+    url("../fonts/MontserratAlternates-Medium.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url("../fonts/montserratalternates-regular-webfont.woff2")
+    format("woff2"),
+    url("../fonts/montserratalternates-regular-webfont.woff") format("woff"),
+    url("../fonts/MontserratAlternates-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #2e2e2e;
+    font-family: "Montserrat Alternates", Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.sky {
+    height: 100%;
+    background-color: #d8e7fb;
+    background-image: url("../img/light-sky.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rye-field {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.message {
+    margin-left: 150px;
+    position: relative;
+    z-index: 20;
+}
+
+@media only screen and (max-width: 1024px) {
+    .message {
+        margin-left: 50px;
+    }
+}
+
+.message__title {
+    color: #037c85;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.message__text {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.message__links {
+    display: flex;
+    flex-direction: column;
+}
+
+.message__links--item {
+    text-decoration: none;
+    color: #037c85;
+    font-size: 20px;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 760px) {
+    .message__title {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .message__text {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .message__links--item {
+        font-size: 18px;
+    }
+
+    .svg {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .message {
+        margin-left: 20px;
+    }
+
+    .message__title {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .message__text {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .message__links--item {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .message {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .message {
+        width: 240px;
+    }
+}
+
+.message__links--item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.message__links--item:hover {
+    transition: color 0.3s;
+    color: #000;
+}
+
+.ears-of-rye {
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    height: 320px;
+}
+
+@media only screen and (max-width: 500px) {
+    .ears-of-rye {
+        height: 180px;
+    }
+}
+
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) {
+    .ears-of-rye {
+        height: 180px;
+    }
+}
