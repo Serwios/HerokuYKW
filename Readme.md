@@ -7,6 +7,8 @@ Heroku вимагає в мене кредитну картку, щоб доба
 Login - Serw
 Password - serwio
 
+Download myssql database
+
 Download repo
 
 Open a console and input:
@@ -14,3 +16,4 @@ Open a console and input:
 sudo systemctl start mysql
 
 mysql -u root -p
+
