@@ -21,8 +21,7 @@ public class RegistrationController {
 	private PasswordEncoder passwordEncoder;
 
 	@GetMapping("/registration")
-	public String registration()
-	{
+	public String registration() {
 		return "registration";
 	}
 
@@ -34,7 +33,7 @@ public class RegistrationController {
 			model.addAttribute("text","This name already exist");
 			return "registration";
 		} else if (!password.equals(passwordConfirm)){
-			model.addAttribute("text" ,"Passwords doesn`t equals");
+			model.addAttribute("text" ,"Passwords doesn't equals");
 			return "registration";
 		}
 

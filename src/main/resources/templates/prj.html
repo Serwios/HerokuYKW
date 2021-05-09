@@ -26,6 +26,37 @@
 <div class="wrap">
     <section class="back_image"><p class="blocktext">Проектувати?</p></section>
 </div>
+<!--HERE-->
+<form action="/prj" method="post" class="auto_form">
+    <div class="container">
+        <label>
+            <input type="text" placeholder="Enter title" name="title" required>
+        </label>
+        <label>
+            <textarea id="text" cols="100%" rows="20%" placeholder="Enter content" name="content" required></textarea>
+        </label>
+        <b th:text="${text}"></b>
+        <button type="submit" class="button_login">Submit</button>
+    </div>
+</form>
+<div th:each="post : ${posts}">
+    <div class="container">
+        <div class="col">
+            <div class="card-container">
+                <div class="card">
+                    <div class="project_image_1"></div>
+                    <h2 th:text="${post.paragraph}"></h2>
+                    <h4 th:text="${post.content}">&ensp;
+                        &ensp;
+                    </h4>
+                    <h3>
+                        Код: <a href="https://github.com/Serwios/YKWorkshopHeroku" class="code_href"> GitHub</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="col">
         <div class="card-container">
@@ -44,6 +75,7 @@
         </div>
     </div>
 </div>
+<div class="container">
 <div class="col">
     <div class="card-container">
         <div class="card">
@@ -59,6 +91,7 @@
             </h3>
         </div>
     </div>
+</div>
 </div>
 </body>
 </html>
