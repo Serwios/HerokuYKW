@@ -20,6 +20,7 @@
         <li><a class="active" href="ykw">Інфо</a></li>
         <li><a class="picked" href="prj">Проекти</a></li>
         <li><a class="active" href="lib">Бібліотека</a></li>
+        <li><a class="picked_name" th:text="${name}"></a></li>
         <li><a class="active" href="/logout">Вийти</a></li>
     </ul>
 </nav>
@@ -35,7 +36,7 @@
         <label>
             <textarea id="text" cols="100%" rows="20%" placeholder="Enter content" name="content" required></textarea>
         </label>
-        <h4><b th:text="${text}"></b></h4>
+        <h2><b th:text="${text}"></b></h2>
         <button type="submit" class="button_login">Submit</button>
     </div>
 </form>

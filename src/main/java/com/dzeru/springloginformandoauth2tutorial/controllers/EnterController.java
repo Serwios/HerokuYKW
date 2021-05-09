@@ -14,11 +14,13 @@ import java.security.Principal;
 public class EnterController {
 	@Autowired
 	private UserService userService;
+	public static String userName;
 
 	@GetMapping("/ykw")
 	public String notes(Principal principal, Model model) {
 		User user = (User) userService.loadUserByUsername(principal.getName());
-		model.addAttribute("name", user.getName());
+		userName = user.getName();
+		model.addAttribute("name", userName);
 	    return "ykw";
 	}
 }

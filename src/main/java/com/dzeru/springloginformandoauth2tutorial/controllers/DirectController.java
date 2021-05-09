@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.security.Principal;
+
 @Controller
 public class DirectController {
     @Autowired
@@ -15,16 +17,13 @@ public class DirectController {
     public String openPrj(Model model) {
         PostMakerController.posts = postRepo.findAll();
         model.addAttribute("posts", PostMakerController.posts);
+        model.addAttribute("name", EnterController.userName);
         return "prj";
     }
 
     @GetMapping("/lib")
-    public String openLib() {
+    public String openLib(Model model) {
+        model.addAttribute("name", EnterController.userName);
         return "lib";
-    }
-
-    @GetMapping("/personal")
-    public String openPersonalCabinet() {
-        return "personal";
     }
 }
