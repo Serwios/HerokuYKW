@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -38,7 +36,7 @@ public class PostMakerController {
             post.setAuthor(principal.getName());
             post.setParagraph(title);
 
-            postRepo.save(post);
+            postRepo.saveAndFlush(post);
             posts = postRepo.findAll();
 
             model.addAttribute("posts", posts);
