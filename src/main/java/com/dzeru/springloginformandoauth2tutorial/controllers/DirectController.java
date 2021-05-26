@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.Collections;
+
 @Controller
 public class DirectController {
     @Autowired
@@ -14,6 +16,8 @@ public class DirectController {
     @GetMapping("/prj")
     public String openPrj(Model model) {
         PostMakerController.posts = postRepo.findAll();
+        Collections.reverse(PostMakerController.posts);
+
         model.addAttribute("posts", PostMakerController.posts);
         model.addAttribute("name", EnterController.userName);
         return "prj";

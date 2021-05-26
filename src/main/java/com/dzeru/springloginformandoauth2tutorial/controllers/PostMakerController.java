@@ -4,6 +4,7 @@ import com.dzeru.springloginformandoauth2tutorial.entities.Post;
 import com.dzeru.springloginformandoauth2tutorial.entities.User;
 import com.dzeru.springloginformandoauth2tutorial.repos.PostRepo;
 import com.dzeru.springloginformandoauth2tutorial.services.UserService;
+import com.dzeru.springloginformandoauth2tutorial.services.UtilityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,8 +19,12 @@ import java.util.List;
 public class PostMakerController {
     @Autowired
     private PostRepo postRepo;
+
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UtilityService utilityService;
 
     public static List<Post> posts = new ArrayList<>();
 
@@ -41,6 +46,7 @@ public class PostMakerController {
             post.setContent(content);
             post.setAuthor(user.getName());
             post.setParagraph(title);
+            post.setDate(utilityService.findCurrentDate());
 
             postRepo.saveAndFlush(post);
             posts = postRepo.findAll();

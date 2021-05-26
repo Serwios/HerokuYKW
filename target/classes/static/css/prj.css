@@ -342,7 +342,7 @@ h2{
 h3{
     padding-top: 5px;
     font-family: 'Hind Madurai', sans-serif;
-    color: deepskyblue;
+    color: #000000;
 }
 
 .project_image_1{
@@ -360,11 +360,12 @@ h3{
 }
 
 .code_href{
-    color: deepskyblue;
+    color: black;
 }
 
-.code_href:hover{
-    color: #00909a;
+.author {
+    color: black;
+    font-style: normal;
 }
 
 @media (max-width: 580px) {
