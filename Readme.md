@@ -1,6 +1,6 @@
 # YKWorkshop [Site]
 
-https://i.ibb.co/cgNMTbb/photo-2021-06-26-17-01-12.jpg
+![image](https://i.ibb.co/cgNMTbb/photo-2021-06-26-17-01-12.jpg)
 
 ## Technologies:
 - HTML, CSS, Thymeleaf
