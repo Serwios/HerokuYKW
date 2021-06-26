@@ -11,7 +11,7 @@
 > and the ability to write posts in the general flow
 
 
-## Lint to the product
+## Link to the product
 
 The site was launched on the Heroku platform
 
