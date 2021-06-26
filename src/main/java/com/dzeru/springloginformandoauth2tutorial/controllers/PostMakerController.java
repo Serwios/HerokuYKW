@@ -8,6 +8,7 @@ import com.dzeru.springloginformandoauth2tutorial.services.UtilityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
@@ -28,17 +29,32 @@ public class PostMakerController {
 
     public static List<Post> posts = new ArrayList<>();
 
+    @GetMapping("/prj/delete")
+    public String deleteAllPosts(Principal principal, Model model) {
+        User user = (User) userService.loadUserByUsername(principal.getName());
+        model.addAttribute("name", EnterController.userName);
+
+        if (user.getName().equals("Serwios")) {
+            postRepo.deleteAll();
+
+            return "prj";
+        }
+
+        return "prj";
+    }
+
     @PostMapping("/prj")
     public String makePost(String title, String content,
                            Principal principal, Model model) {
 
+        model.addAttribute("name", EnterController.userName);
 
         if (title.length() > 30) {
             model.addAttribute("text", "Title size > 30");
-        } else if (content.length() < 50) {
-            model.addAttribute("text", "Your content < 50 symbols");
-        } else if (content.length() > 500) {
-            model.addAttribute("text", "Your content > 500 symbols");
+        } else if (content.trim().length() < 10) {
+            model.addAttribute("text", "Your content < 10 symbols");
+        } else if (content.trim().length() > 1000) {
+            model.addAttribute("text", "Your content > 1000 symbols");
         } else {
             Post post = new Post();
             User user = (User) userService.loadUserByUsername(principal.getName());
@@ -53,7 +69,6 @@ public class PostMakerController {
             Collections.reverse(posts);
 
             model.addAttribute("posts", posts);
-            model.addAttribute("name", EnterController.userName);
             return "prj";
         }
 
