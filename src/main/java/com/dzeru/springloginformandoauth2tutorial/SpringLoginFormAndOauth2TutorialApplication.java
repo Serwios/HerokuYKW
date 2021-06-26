@@ -1,11 +1,11 @@
-package com.dzeru.YKWorkshop;
+package com.dzeru.springloginformandoauth2tutorial;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class YKWorkshop {
+public class SpringLoginFormAndOauth2TutorialApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(YKWorkshop.class, args);
+		SpringApplication.run(SpringLoginFormAndOauth2TutorialApplication.class, args);
 	}
 }
