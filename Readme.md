@@ -17,7 +17,7 @@
 
 The site was launched on the Heroku platform
 
-- [https://https://ykw.herokuapp.com/](https://ykw.herokuapp.com/)
+- (https://ykw.herokuapp.com/)
 
 
 
