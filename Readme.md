@@ -11,6 +11,7 @@
 > This simple site was created to show my skills in using database, 
 > java and spring. There is a registration / login system 
 > and the ability to write posts in the general flow
+> Do not take this site seriously, I made it for fun :)
 
 
 ## Link to the product
