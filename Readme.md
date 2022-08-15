@@ -5,7 +5,7 @@
 ## Technologies:
 - HTML, CSS, Thymeleaf
 - Java, Spring Boot, Spring Data, Spring Security, Hibernate, 
-- MariaDB, Lombock
+- MariaDB, Lombok
 
 ## About
 > This simple site was created to show my skills in using database, 
