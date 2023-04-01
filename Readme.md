@@ -20,6 +20,5 @@ The site was launched on the Heroku platform
 
 - (https://ykw.herokuapp.com/)
 
-
-
+PS: The site was written as my first attempt at web development. Unfortunately, it's not currently on Heroku, so it's best to check out other projects that are still running.
 
